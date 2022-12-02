@@ -1,4 +1,4 @@
-type IErrors = Record<string, Record<string, Array<object>>>;
+type IErrors = Record<string, Array<Record<string, any>>>;
 
 interface IErrorResponse {
     errors?: IErrors;
