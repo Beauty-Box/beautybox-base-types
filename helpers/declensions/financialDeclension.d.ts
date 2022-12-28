@@ -1,4 +1,4 @@
-declare function visitDeclension(total: number, genitive?: boolean): string;
+declare function financialDeclension(total: number, genitive?: boolean): string;
 
-export { visitDeclension };
-export default visitDeclension;
+export { financialDeclension };
+export default financialDeclension;
