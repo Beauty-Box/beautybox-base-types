@@ -12,7 +12,7 @@ interface IClientTotalVisits {
 }
 
 declare class Client {
-    constructor(id: number| null);
+    constructor(id: number | null);
 
     bids: IClientBids;
     totalVisits: IClientTotalVisits;
