@@ -11,12 +11,18 @@ interface IClientTotalVisits {
     canceled: number;
 }
 
+interface IClientReviews {
+    average: number;
+    total: number;
+}
+
 declare class Client {
     constructor(id: number | null);
 
     bids: IClientBids;
     totalVisits: IClientTotalVisits;
     profit: number;
+    reviews: IClientReviews;
     show: () => Promise<void>;
     getBids: () => Promise<void>;
     getAnalytics: () => Promise<void>;
