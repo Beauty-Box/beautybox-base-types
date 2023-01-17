@@ -25,6 +25,9 @@ declare class Client extends Person {
     totalVisits: IClientTotalVisits;
     profit: number;
     reviews: IClientReviews;
+    clientTypeID: number;
+    blockingOnline: number;
+    notificationsDisabled: number;
     show: () => Promise<void>;
     getBids: () => Promise<void>;
     getAnalytics: () => Promise<void>;
