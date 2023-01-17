@@ -1,3 +1,5 @@
+export * from './ApiConfig';
+
 type IErrors = Record<string, Array<Record<string, any>>>;
 
 interface IErrorResponse {

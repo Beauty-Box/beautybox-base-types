@@ -1,3 +1,5 @@
+import Person from "./Person";
+
 interface IClientBids {
     count: number;
     past: Array<object>;
@@ -16,9 +18,9 @@ interface IClientReviews {
     total: number;
 }
 
-declare class Client {
+declare class Client extends Person {
     constructor(id: number | null);
-
+    clientID?: number;
     bids: IClientBids;
     totalVisits: IClientTotalVisits;
     profit: number;
@@ -26,6 +28,9 @@ declare class Client {
     show: () => Promise<void>;
     getBids: () => Promise<void>;
     getAnalytics: () => Promise<void>;
+    update: () => Promise<void>;
+    create: () => Promise<void>;
+    updateFields: (client: Partial<Client>) => Promise<void>;
 }
 
 export { Client };
