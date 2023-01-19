@@ -6,6 +6,20 @@ interface IClientBids {
     coming: Array<object>;
 }
 
+interface IClientProduct {
+    id: number;
+    saleID: number;
+    name: string;
+    price: number;
+    quantity: number;
+    createdAt: string;
+}
+
+interface IClientProducts {
+    count: number;
+    products: Array<IClientProduct>;
+}
+
 interface IClientTotalVisits {
     all: number;
     new: number;
@@ -22,6 +36,7 @@ declare class Client extends Person {
     constructor(id: number | null);
     clientID?: number;
     bids: IClientBids;
+    products: IClientProducts;
     totalVisits: IClientTotalVisits;
     profit: number;
     reviews: IClientReviews;
@@ -30,6 +45,7 @@ declare class Client extends Person {
     notificationsDisabled: number;
     show: () => Promise<void>;
     getBids: () => Promise<void>;
+    getProducts: () => Promise<void>;
     getAnalytics: () => Promise<void>;
     update: () => Promise<void>;
     create: () => Promise<void>;
