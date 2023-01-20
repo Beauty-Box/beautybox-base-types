@@ -6,7 +6,7 @@ interface IClientBids {
     coming: Array<object>;
 }
 
-export interface IClientProduct {
+interface IClientProduct {
     id: number;
     saleID: number;
     name: string;
@@ -52,6 +52,6 @@ declare class Client extends Person {
     updateFields: (client: Partial<Client>) => Promise<void>;
 }
 
-export { Client };
+export { Client, IClientProduct };
 
 export default Client;
