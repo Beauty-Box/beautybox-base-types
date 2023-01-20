@@ -6,7 +6,7 @@ interface IClientBids {
     coming: Array<object>;
 }
 
-interface IClientProduct {
+export interface IClientProduct {
     id: number;
     saleID: number;
     name: string;
