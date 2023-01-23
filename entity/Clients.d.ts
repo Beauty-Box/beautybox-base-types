@@ -1,9 +1,47 @@
 import Person from "./Person";
+import VisitStatus from './VisitStatus';
 
 interface IClientBids {
     count: number;
     past: Array<object>;
     coming: Array<object>;
+}
+
+interface IClientBidVisit {
+    bidID: number;
+    masterID: number;
+    serviceID: number;
+    timeFrom: string;
+    timeTo: string;
+    timeDuration: number; // in minutes
+    price: number;
+    masterName: string;
+    serviceName: string;
+}
+
+interface IClientVisit {
+    visitID: number;
+    status: VisitStatus;
+    date: string;
+    comment: string;
+    isOnline: boolean;
+    bids: Array<IClientBidVisit>;
+}
+
+interface IClientVisits {
+    past: {
+        count: number;
+        visits: Array<IClientVisit>;
+    };
+    coming: {
+        count: number;
+        visits: Array<IClientVisit>;
+    };
+}
+
+export enum ClientVisitsType {
+    COMING = 'coming',
+    PAST = 'past',
 }
 
 interface IClientProduct {
@@ -36,6 +74,7 @@ declare class Client extends Person {
     constructor(id: number | null);
     clientID?: number;
     bids: IClientBids;
+    visits: IClientVisits;
     products: IClientProducts;
     totalVisits: IClientTotalVisits;
     profit: number;
@@ -45,6 +84,7 @@ declare class Client extends Person {
     notificationsDisabled: number;
     show: () => Promise<void>;
     getBids: () => Promise<void>;
+    getVisitsV2: (type: ClientVisitsType) => Promise<void>;
     getProducts: () => Promise<void>;
     getAnalytics: () => Promise<void>;
     update: () => Promise<void>;
@@ -52,6 +92,6 @@ declare class Client extends Person {
     updateFields: (client: Partial<Client>) => Promise<void>;
 }
 
-export { Client, IClientProduct };
+export { Client, IClientProduct, IClientVisit, IClientBidVisit };
 
 export default Client;
