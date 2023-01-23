@@ -24,7 +24,7 @@ interface IClientBidVisit {
     serviceName: string;
 }
 
-interface IClientVisit {
+export interface IClientVisit {
     visitID: number;
     status: VisitStatus;
     date: string;
@@ -33,15 +33,14 @@ interface IClientVisit {
     bids: Array<IClientBidVisit>;
 }
 
+export interface IClientVisitsResponse {
+    count: number;
+    visits: Array<IClientVisit>;
+}
+
 interface IClientVisits {
-    past: {
-        count: number;
-        visits: Array<IClientVisit>;
-    };
-    coming: {
-        count: number;
-        visits: Array<IClientVisit>;
-    };
+    past: IClientVisitsResponse;
+    coming: IClientVisitsResponse;
 }
 
 interface IClientProduct {
