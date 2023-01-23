@@ -1,4 +1,4 @@
-export enum VisitStatus {
+export const enum VisitStatus {
     NEW = 'new',
     WORKING = 'working',
     DONE = 'done',

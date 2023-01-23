@@ -1,6 +1,10 @@
 import Person from "./Person";
 import VisitStatus from './VisitStatus';
-import ClientVisitsType from "./ClientVisitsType";
+
+export const enum ClientVisitsType {
+    COMING = 'coming',
+    PAST = 'past',
+}
 
 interface IClientBids {
     count: number;
