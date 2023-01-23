@@ -1,6 +1,7 @@
 import Person from "./Person";
 import VisitStatus from './VisitStatus';
 import ClientVisitsType from "./ClientVisitsType";
+
 interface IClientBids {
     count: number;
     past: Array<object>;
