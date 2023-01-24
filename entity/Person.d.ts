@@ -9,6 +9,7 @@ export interface IBirthday {
 declare class Person {
     constructor(config: ApiConfig);
     name?: string;
+    avatar?: string | null;
     phone?: string;
     email?: string;
     gender?: number;
