@@ -15,6 +15,8 @@ declare class Person {
     gender?: number;
     comment?: string;
     birthday?: IBirthday;
+    createdAt?: string;
+    readonly convertBirthday: string;
 }
 
 export { Person };
