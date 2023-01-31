@@ -1,5 +1,6 @@
 import Person from "./Person";
 import VisitStatus from './VisitStatus';
+import SaleState from './SaleState';
 
 export const enum ClientVisitsType {
     COMING = 'coming',
@@ -57,6 +58,20 @@ interface IClientProducts {
     products: Array<IClientProduct>;
 }
 
+interface IClientSale {
+    id: number | null;
+    number: number;
+    state: SaleState;
+    textState: string;
+    createdAt: string;
+    sumPrice: number;
+}
+
+interface IClientSales {
+    count: number;
+    sales: Array<IClientSale>;
+}
+
 interface IClientTotalVisits {
     all: number;
     new: number;
@@ -75,6 +90,7 @@ declare class Client extends Person {
     bids: IClientBids;
     visits: IClientVisits;
     products: IClientProducts;
+    sales: IClientSales;
     totalVisits: IClientTotalVisits;
     profit: number;
     reviews: IClientReviews;
@@ -85,6 +101,7 @@ declare class Client extends Person {
     getBids: () => Promise<void>;
     getVisitsV2: (type: ClientVisitsType) => Promise<void>;
     getProducts: () => Promise<void>;
+    getSales: () => Promise<void>;
     getAnalytics: () => Promise<void>;
     update: () => Promise<void>;
     create: () => Promise<void>;
