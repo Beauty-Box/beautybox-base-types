@@ -3,6 +3,7 @@ export const enum VisitStatus {
     WORKING = 'working',
     DONE = 'done',
     CANCELED = 'cancel',
+    COMPLETED = 'completed',
 }
 
 export default VisitStatus;
