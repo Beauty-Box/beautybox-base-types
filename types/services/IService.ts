@@ -34,7 +34,7 @@ export interface IServiceCatalog extends IService {
 }
 
 export interface IServicesList {
-    count: number;
+    count?: number;
     services: IServiceListItem[];
 }
 
