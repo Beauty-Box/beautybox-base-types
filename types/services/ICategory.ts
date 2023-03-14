@@ -17,8 +17,8 @@ export type IRecommendedCategory = ICategoryBase;
 export type ICustomCategory = ICurrentCategory;
 
 export interface ICategory extends ICurrentCategory {
-    status: number;
-    isEmpty: boolean;
+    status?: number;
+    isEmpty?: boolean;
     isOpen?: boolean;
     services?: IServiceCatalog[];
 }
