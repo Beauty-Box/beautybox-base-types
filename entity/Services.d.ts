@@ -4,7 +4,7 @@ import { ICategory, ICategoryShort, IRecommendedCategory, ICategoryBase, IServic
 
 declare class Categories {
     constructor();
-    getCategories: () => Promise<ICategory[]>;
+    getCategories: ({}: { query?: Record<string, any> }) => Promise<ICategory[]>;
     getCategoriesShort: () => Promise<ICategoryShort[]>;
     getRecommendedCategories: () => Promise<IRecommendedCategory[]>;
     saveCategories: (data: ICategoryBase[]) => Promise<ICategory[]>;
