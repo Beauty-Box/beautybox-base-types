@@ -1,10 +1,12 @@
 export * from '../types/services';
 
 import { ICategory, ICategoryShort, IRecommendedCategory, ICategoryBase, IServiceToCreate, IServiceCatalog, IServicesList, IServiceInfo } from '../types/services';
+import { IErrors } from '../api';
+
 
 declare class Categories {
     constructor();
-    getCategories: ({}: { query?: Record<string, any> }) => Promise<ICategory[]>;
+    getCategories: ({}: { query?: Record<string, any> }) => Promise<ICategory[] | IErrors>;
     getCategoriesShort: () => Promise<ICategoryShort[]>;
     getRecommendedCategories: () => Promise<IRecommendedCategory[]>;
     saveCategories: (data: ICategoryBase[]) => Promise<ICategory[]>;
