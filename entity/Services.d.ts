@@ -4,9 +4,14 @@ import { ICategory, ICategoryShort, IRecommendedCategory, ICategoryBase, IServic
 import { IErrors } from '../api';
 
 
+interface IGetCategoriesResponse {
+    categories: ICategory[]; 
+    errors: IErrors;
+}
+
 declare class Categories {
     constructor();
-    getCategories: ({}: { query?: Record<string, any> }) => Promise<ICategory[] | IErrors>;
+    getCategories: ({}: { query?: Record<string, any> }) => Promise<IGetCategoriesResponse>;
     getCategoriesShort: () => Promise<ICategoryShort[]>;
     getRecommendedCategories: () => Promise<IRecommendedCategory[]>;
     saveCategories: (data: ICategoryBase[]) => Promise<ICategory[]>;
