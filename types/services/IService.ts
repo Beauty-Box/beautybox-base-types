@@ -1,3 +1,5 @@
+import { IEmployeeBase } from '../employees/IEmployee';
+
 export interface IServiceBase {
     id?: number | null;
     serviceID?: number;
@@ -31,6 +33,7 @@ export interface IServiceCatalog extends IService {
     active: boolean;
     photos: string[];
     photosCount: number;
+    employees?: IEmployeeBase[];
 }
 
 export interface IServicesList {
