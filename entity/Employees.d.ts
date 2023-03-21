@@ -1,14 +1,18 @@
-import { IEmployeeBase } from '../types/employees';
+import { IEmployeeListItem } from '../types/employees';
 
 interface IEmployeeResponse {
     count: number;
-    employees: IEmployeeBase[];
+    employees: IEmployeeListItem[];
 }
 
+export interface IEmployeePayload {
+    filters?: Record<string, any>;
+    skip?: number;
+}
 
 declare class Employees {
     constructor();
-    employees: () => Promise<IEmployeeResponse>;
+    employees: (payload?: IEmployeePayload) => Promise<IEmployeeResponse>;
 }
 
 export { Employees };
