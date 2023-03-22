@@ -1,6 +1,8 @@
 import Person from "./Person";
 import VisitStatus from './VisitStatus';
 import SaleState from './SaleState';
+import { IReviewsStatistic } from '../types/reviews/IReview';
+
 
 export const enum ClientVisitsType {
     COMING = 'coming',
@@ -79,10 +81,7 @@ interface IClientTotalVisits {
     canceled: number;
 }
 
-interface IClientReviews {
-    average: number;
-    total: number;
-}
+
 
 declare class Client extends Person {
     constructor(id: number | null);
@@ -93,7 +92,7 @@ declare class Client extends Person {
     sales: IClientSales;
     totalVisits: IClientTotalVisits;
     profit: number;
-    reviews: IClientReviews;
+    reviews: IReviewsStatistic;
     clientTypeID: number;
     blockingOnline: number;
     notificationsDisabled: number;

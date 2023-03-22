@@ -1,8 +1,9 @@
+import { IReviewsStatistic } from '../reviews/IReview';
+
 export interface IEmployeeCategory {
     text: string;
     value: number;
 }
-
 
 export interface IEmployeeBase {
     userID: number;
@@ -25,6 +26,8 @@ export interface IEmployee extends IEmployeeBase {
 
 export interface IEmployeeListItem extends IEmployee {
     employeeCategories?: IEmployeeCategory[];
+    reviews: IReviewsStatistic;
+    lastSchedule: string | null;
 }
 
 
