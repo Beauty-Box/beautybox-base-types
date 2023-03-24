@@ -28,6 +28,7 @@ export interface IEmployeeListItem extends IEmployee {
     employeeCategories?: IEmployeeCategory[];
     reviews: IReviewsStatistic;
     lastSchedule: string | null;
+    itemID: number;
 }
 
 
