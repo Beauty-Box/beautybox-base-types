@@ -1,5 +1,5 @@
 import Person from "./Person";
-import VisitStatus from '../types/visits/VisitStatus';
+import { VisitStatus } from '../types/visits/VisitStatus';
 import SaleState from './SaleState';
 import { IReviewsStatistic } from '../types/reviews/IReview';
 
