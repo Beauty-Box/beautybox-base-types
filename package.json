@@ -9,6 +9,7 @@
   "license": "ISC",
   "scripts": {},
   "dependencies": {
+    "@vuelidate/validators": "^2.0.1"
   },
   "typeScriptVersion": "4.8",
   "repository": {
