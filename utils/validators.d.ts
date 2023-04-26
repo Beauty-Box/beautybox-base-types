@@ -1,18 +1,20 @@
 import { helpers } from '@vuelidate/validators';
 
-export interface validatorName {
+declare interface validatorName {
     required: ReturnType<typeof helpers.withMessage>;
     minLength: ReturnType<typeof helpers.withMessage>;
     maxLength: ReturnType<typeof helpers.withMessage>;
 }
 
-export interface validatorPhone {
+declare interface validatorPhone {
     required: ReturnType<typeof helpers.withMessage>;
     minLength: ReturnType<typeof helpers.withMessage>;
 }
 
-export interface validatorPassword {
+declare interface validatorPassword {
     required: ReturnType<typeof helpers.withMessage>;
     minLength: ReturnType<typeof helpers.withMessage>;
     maxLength: ReturnType<typeof helpers.withMessage>;
 }
+
+export { validatorName, validatorPhone, validatorPassword };
