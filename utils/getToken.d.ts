@@ -1,4 +1,4 @@
-declare function getToken(): string;
+declare function getToken(): string | null;
 
 export { getToken };
 
