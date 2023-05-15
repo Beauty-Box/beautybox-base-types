@@ -1,4 +1,4 @@
-declare function objectToURLParams(object: object): string;
+declare function objectToURLParams(object: object, dropEmpty?: boolean): string;
 
 export { objectToURLParams };
 export default objectToURLParams;
