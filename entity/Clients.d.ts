@@ -121,6 +121,6 @@ declare class Clients {
     searchClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
 }
 
-export { Client, Clients, IClientProduct, IClientVisit, IClientBidVisit };
+export { Client, Clients, IClient, IClientAvatarStatus, IClientProduct, IClientVisit, IClientBidVisit };
 
 export default Client;
