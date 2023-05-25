@@ -2,6 +2,7 @@ import Person from "./Person";
 import { VisitStatus } from '../types/visits/VisitStatus';
 import SaleState from './SaleState';
 import { IReviewsStatistic } from '../types/reviews/IReview';
+import { IClient, IClientAvatarStatus } from '../types/clients/index';
 
 
 export const enum ClientVisitsType {
@@ -107,6 +108,19 @@ declare class Client extends Person {
     updateFields: (client: Partial<Client>) => Promise<void>;
 }
 
-export { Client, IClientProduct, IClientVisit, IClientBidVisit };
+declare class Clients {
+    constructor();
+    sortOrder: boolean;
+    sortBy: string;
+    clients: IClient[];
+    count: number;
+    clientsList: Clients['clients'];
+    clientsCount: Clients['count'];
+    static clientAvatarStatus: IClientAvatarStatus;
+    getClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
+    searchClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
+}
+
+export { Client, Clients, IClientProduct, IClientVisit, IClientBidVisit };
 
 export default Client;
