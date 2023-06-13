@@ -82,7 +82,12 @@ interface IClientTotalVisits {
     canceled: number;
 }
 
-
+export interface IClientLabel {
+    count: number;
+    label: string;
+    text: string;
+    color: string;
+}
 
 declare class Client extends Person {
     constructor(id: number | null);
@@ -97,6 +102,7 @@ declare class Client extends Person {
     clientTypeID: number;
     blockingOnline: number;
     notificationsDisabled: number;
+    labels: IClientLabel[];
     show: () => Promise<void>;
     getBids: () => Promise<void>;
     getVisitsV2: (type: ClientVisitsType) => Promise<void>;
