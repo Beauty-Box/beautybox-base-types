@@ -1,4 +1,6 @@
 import { IEmployeeListItem } from '../types/employees';
+export * from '../types/employees';
+
 
 interface IEmployeeResponse {
     count: number;

@@ -24,6 +24,15 @@ export interface IEmployee extends IEmployeeBase {
     linkOnline: string;
 }
 
+export interface IEmployeeShort {
+    value: number;
+    text: string;
+    position?: string;
+    avatar?: string | null;
+    addresses: number[];
+    services: number[];
+}
+
 export interface IEmployeeListItem extends IEmployee {
     employeeCategories?: IEmployeeCategory[];
     reviews: IReviewsStatistic;
