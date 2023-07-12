@@ -89,6 +89,12 @@ export interface IClientLabel {
     color: string;
 }
 
+export interface IClientType {
+    clientTypeID: number;
+    name: string;
+    color: string;
+}
+
 declare class Client extends Person {
     constructor(id: number | null);
     clientID?: number;
@@ -103,6 +109,7 @@ declare class Client extends Person {
     blockingOnline: number;
     notificationsDisabled: number;
     labels: IClientLabel[];
+    clientTypes: IClientType[];
     show: () => Promise<void>;
     getBids: () => Promise<void>;
     getVisitsV2: (type: ClientVisitsType) => Promise<void>;
