@@ -1,9 +1,12 @@
+export type PriceType = 'fixed' | 'free' | 'from';
 
 export interface IServiceBase {
     id?: number | null;
     serviceID?: number;
     title: string;
     price?: number;
+    priceType?: number;
+    priceTypeAlias?: PriceType;
     time?: number; // in minutes
 }
 
