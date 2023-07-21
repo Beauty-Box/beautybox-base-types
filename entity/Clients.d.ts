@@ -3,7 +3,7 @@ import { VisitStatus } from '../types/visits/VisitStatus';
 import SaleState from './SaleState';
 import { IReviewsStatistic } from '../types/reviews/IReview';
 import { IClient, IClientReviews, IClientAvatarStatus } from '../types/clients/index';
-
+import { PriceType } from '../types/services';
 
 export const enum ClientVisitsType {
     COMING = 'coming',
@@ -24,6 +24,7 @@ interface IClientBidVisit {
     timeTo: string;
     timeDuration: number; // in minutes
     price: number;
+    priceTypeAlias: PriceType;
     masterName: string;
     serviceName: string;
 }
