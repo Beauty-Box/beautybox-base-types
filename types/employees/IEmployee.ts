@@ -13,7 +13,8 @@ export interface IEmployeeBase {
 
 export interface IEmployee extends IEmployeeBase {
     phoneActive: number;
-    associatePhone: string;
+    phone?: string;
+    associatePhone?: string;
     isOnline: boolean;
     payrollRuleID: number | '';
     position: number;
