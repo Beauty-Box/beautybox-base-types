@@ -5,3 +5,4 @@ export * from './isNumber';
 export * from './genFullTime';
 export * from './deepEqual';
 export * from './genArrayTimeIntervalMin';
+export * from './normalizeTimestamp';
