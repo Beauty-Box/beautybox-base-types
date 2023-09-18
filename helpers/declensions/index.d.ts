@@ -6,3 +6,4 @@ export * from './financialDeclension';
 export * from './hourDeclension';
 export * from './minuteDeclension';
 export * from './employeeDeclension';
+export * from './dayDeclension';
