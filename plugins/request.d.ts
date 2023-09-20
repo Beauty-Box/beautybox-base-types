@@ -6,6 +6,9 @@ declare const request: {
     install(app: any, ...options: unknown[]): any;
 }
 
-export { useApi };
+declare const requestV3: {
+    install(app: any, ...options: unknown[]): any;
+}
 
+export { useApi, requestV3 };
 export default request;
