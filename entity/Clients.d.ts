@@ -133,6 +133,7 @@ declare class Clients {
     static clientAvatarStatus: (item: IClient) => IClientAvatarStatus;
     getClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
     searchClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
+    getClientsIDs: (filters?: Record<string, any>) => Promise<void | never>;
 }
 
 export { Client, Clients, IClient, IClientReviews, IClientAvatarStatus, IClientProduct, IClientVisit, IClientBidVisit };
