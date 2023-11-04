@@ -128,6 +128,7 @@ declare class Clients {
     sortBy: string;
     clients: IClient[];
     count: number;
+    clientsIDs: number[];
     clientsList: Clients['clients'];
     clientsCount: Clients['count'];
     static clientAvatarStatus: (item: IClient) => IClientAvatarStatus;
