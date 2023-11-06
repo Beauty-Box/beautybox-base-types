@@ -132,7 +132,7 @@ declare class Clients {
     clientsList: Clients['clients'];
     clientsCount: Clients['count'];
     static clientAvatarStatus: (item: IClient) => IClientAvatarStatus;
-    getClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
+    getClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<IClient[]>;
     searchClients: (filters?: Record<string, any>, skip?: number, limit?: number) => Promise<void>;
     getClientsIDs: (filters?: Record<string, any>) => Promise<void | never>;
 }
